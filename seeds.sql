@@ -27,3 +27,14 @@ VALUES ('Attorney', 150000, 5),('Paralegal', 50000, 5);
 
 -- employee entries
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ('Jessica', 'Barley', 1, 1),
+('Tom', 'Smith', 2, 1),
+('Brandon', 'Whittington', 4, 2),
+('Haniya', 'Trejo', 3, 3),
+('Fintan', 'Briggs', 3, 3),
+('Amelia', 'tyson', 5, 2),
+('Sufyaan', 'Galloway', 8, 1),
+('Elana', 'Manning', 7, 7),
+('Jemima', 'Shepherd', 6, 7),
+('Veronica', 'Estrada', 9, 1),
+('Nel', 'Wells', 10, 10);
