@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
     password: "MSWatch!",
     database: "business_db"
 });
-// -----------------------------------------------------
+// ----------------------------------------------------- basic app transitions
 // Starts application with welcome message
 function startApp() {
     console.log(`\nWelcome! Accessing your Org employee database... \nWhat would you like to do first?`);
@@ -44,7 +44,7 @@ function end(){
     console.log(`\nGoodbye!\n`)
     connection.end;
 };
-// -----------------------------------------------------
+// ----------------------------------------------------- update database
 // update and employee
 function updateEmployee() {
     connection.query(`SELECT * FROM employee`, function (err, res) {
@@ -105,7 +105,7 @@ function updateEmployee() {
         });
     });
 };
-// -----------------------------------------------------
+// ----------------------------------------------------- add to database tables
 // decide what type of data to add
 function addData(){
     const questions = [
@@ -304,7 +304,7 @@ function addRole(){
         });
     });
 };
-// -----------------------------------------------------
+// ----------------------------------------------------- render data from database
 // Decides what data to render
 function renderTable() {
     const questions = [
@@ -364,7 +364,10 @@ function showRoles() {
         chooseAction()
     });
 };
-// -----------------------------------------------------
+// ----------------------------------------------------- start application
+startApp();
+
+
 // failed matchID function to be reused becase MatchProp wont be added as a property and it just looks for the literal property of matchProp =(
 // function matchID(value, matchArray, matchProp){
 //     for(var i = 0; i < matchArray.length; i++){
@@ -373,4 +376,3 @@ function showRoles() {
 //         };
 //     };
 // };
-startApp();
